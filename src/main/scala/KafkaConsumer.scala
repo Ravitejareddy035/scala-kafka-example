@@ -15,7 +15,7 @@ object KafkaConsumer extends App {
   consumer.subscribe(TOPIC)
 
   while(true){
-    val records = consumer.poll(100)
+    val records = consumer.poll(200)
     for(record<-records.asScala) println(record)
   }
 
